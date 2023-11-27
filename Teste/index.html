@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Cabeçalho</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Estilos personalizados, se necessário */
+        header {
+            background-color: #7b331b;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            position: relative;
+        }
+
+        .spacer {
+            height: 50px;
+        }
+
+        .scroll-btns {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .scroll-btns button {
+            margin: 5px;
+        }
+
+        .btn-outline-primary {
+                color: black;
+                background-color: white;
+                border-color: transparent;
+            }
+
+        .btn-outline-primary:hover {
+                color: white;
+                background-color: black;
+                border-color: transparent;
+            }
+
+        .card-img-custom {
+            width: 100%; 
+            height: 300px; 
+            object-fit: cover; /* Ajuste para cobrir o espaço do container mantendo a proporção */
+        }    
+
+        @media (max-width: 768px) {
+            .text-right {
+                text-align: center !important;
+            }
+
+            .spacer {
+                display: none;
+            }
+
+            .scroll-btns {
+                position: static;
+                transform: none;
+                margin-top: 20px;
+            }
+
+            .section-title {
+                text-align: center;
+            }
+
+            .form-inline {
+                display: block;
+                text-align: center;
+            }
+
+            .form-inline input {
+                margin-bottom: 10px;
+            }
+
+            .btn-outline-primary {
+                color: black;
+                background-color: white;
+                border-color: transparent;
+            }
+
+            .btn-outline-primary:hover {
+                color: white;
+                background-color: black;
+                border-color: transparent;
+            }
+            
+            .card-img-custom {
+            width: 100%; 
+            height: 200px; 
+            object-fit: cover; /* Ajuste para cobrir o espaço do container mantendo a proporção */
+        }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h1>Pet food</h1>
+                </div>
+                <div class="col-md-4">
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search">
+                        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Buscar</button>
+                    </form>
+                </div>
+                <div class="col-md-4 text-right">
+                    <a href="login.html" class="btn btn-primary">Login</a>
+                    <a href="teste.html" class="btn btn-primary">Teste1</a>
+                    <a href="teste2.html" class="btn btn-primary">Teste2</a>
+                    <img src="logo.jpg.png" alt="Logo do Site" style="max-width: 100px; margin-left: 10px;">
+                </div>
+            </div>
+        </div>
+
+        <div class="spacer"></div>
+
+        <div class="scroll-btns">
+            <button class="btn btn-secondary" onclick="scrollToSection('comidas-vivas')">Comidas Vivas</button>
+            <button class="btn btn-secondary" onclick="scrollToSection('comidas-congeladas')">Comidas Congeladas</button>
+            <button class="btn btn-secondary" onclick="scrollToSection('comidas-especiais')">Comidas Especiais</button>
+            <button class="btn btn-secondary" onclick="scrollToSection('ofertas')">Ofertas</button>
+        </div>
+    </header>
+    <!-- Conteúdo das seções -->
+    <div id="comidas-vivas" class="container">
+        <h2 class="section-title">Comidas vivas</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card text-center mx-auto">
+                    <img src="gafanhoto.jpeg" class="card-img-top card-img-custom" alt="Imagem Produto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Gafanhoto</h5>
+                        <p class="card-text">Pacote com 10un.</p>
+                        <p class="card-text">R$ 25,00</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card text-center mx-auto">
+                    <img src="bichoseda.png" class="card-img-top card-img-custom" alt="Imagem Produto 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Bicho da seda</h5>
+                        <p class="card-text">Pacote com 10un.</p>
+                        <p class="card-text">R$ 25,00</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card text-center mx-auto">
+                    <img src="minhoca.jpg" class="card-img-top card-img-custom" alt="Imagem Produto 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Minhoca</h5>
+                        <p class="card-text">Pacote com 10un.</p>
+                        <p class="card-text">R$ 25,00</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="comidas-congeladas" class="container">
+        <h2 class="section-title">Comidas congeladas</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card text-center mx-auto">
+                    <img src="ratocinza.jpeg" class="card-img-top card-img-custom" alt="Imagem Produto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Rato cinza</h5>
+                        <p class="card-text">Pacote com 10un.</p>
+                        <p class="card-text">R$ 25,00</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card text-center mx-auto">
+                    <img src="camundongo.jpeg" class="card-img-top card-img-custom" alt="Imagem Produto 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Camundongo</h5>
+                        <p class="card-text">Pacote com 10un.</p>
+                        <p class="card-text">R$ 25,00</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card text-center mx-auto">
+                    <img src="sapo.jpg" class="card-img-top card-img-custom" alt="Imagem Produto 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Sapo</h5>
+                        <p class="card-text">Pacote com 10un.</p>
+                        <p class="card-text">R$ 25,00</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    
+    <div id="comidas-especiais" class="container">
+        <h2 class="section-title">Comidas especiais</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card text-center mx-auto">
+                    <img src="macaco.jpeg" class="card-img-top card-img-custom" alt="Imagem Produto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Ração para macacos</h5>
+                        <p class="card-text">Unidade simples</p>
+                        <p class="card-text">R$ 50,00</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card text-center mx-auto">
+                    <img src="fenoseco.jpeg" class="card-img-top" alt="Imagem Produto 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Feno seco</h5>
+                        <p class="card-text">Unidade simples</p>
+                        <p class="card-text">R$ 50,00</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card text-center mx-auto">
+                    <img src="fenoverde.jpeg" class="card-img-top" alt="Imagem Produto 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Feno verde</h5>
+                        <p class="card-text">Unidade simples</p>
+                        <p class="card-text">R$ 50,00</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="ofertas" class="container">
+        <h2 class="section-title">Ofertas</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card text-center mx-auto">
+                    <img src="caminho/para/imagem-produto1.jpg" class="card-img-top" alt="Imagem Produto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Ração para Cães</h5>
+                        <p class="card-text">Descrição breve do produto.</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card text-center mx-auto">
+                    <img src="caminho/para/imagem-produto2.jpg" class="card-img-top" alt="Imagem Produto 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Ração para Gatos</h5>
+                        <p class="card-text">Descrição breve do produto.</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card text-center mx-auto">
+                    <img src="caminho/para/imagem-produto3.jpg" class="card-img-top" alt="Imagem Produto 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Ração para Pássaros</h5>
+                        <p class="card-text">Descrição breve do produto.</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    </script>
+    <footer class="bg-dark text-light text-center py-3">
+        <p>Pet Food &copy; 2023. Todos os direitos reservados.</p>
+    </footer>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

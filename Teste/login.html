@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login e Cadastro</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Estilos personalizados, se necessário */
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-section,
+        .signup-section {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .signup-btn,
+        .login-btn {
+            width: 100%;
+        }
+        .signup-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .signup-section .btn-block {
+            width: 100%;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8 col-sm-10">
+                <div class="login-section">
+                    <h2 class="text-center">Login</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Senha</label>
+                            <input type="password" class="form-control" id="password" placeholder="Digite sua senha" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block login-btn">Login</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-8 col-sm-10">
+                <div class="signup-section">
+                    <h2 class="text-center">Cadastre-se</h2>
+                    <button type="button" class="btn btn-success btn-block signup-btn">Cadastre-se</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Redirecionar para a página cadastro.html ao clicar em Cadastre-se
+        document.querySelector('.signup-btn').addEventListener('click', function() {
+            window.location.href = 'cadastro.html';
+        });
+    </script>
+</body>
+</html>
